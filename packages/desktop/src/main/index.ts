@@ -49,7 +49,7 @@ initializeLogger(appEnvironment)
 
 crashReporter.start({
   companyName: '',
-  productName: 'MarkText',
+  productName: 'TyporaPro',
   uploadToServer: false, // collect locally
   compress: true
 })
@@ -91,7 +91,7 @@ registerSandboxIpcHandlers({
   }
 })
 
-electronApp.setAppUserModelId('com.electron.marktext')
+electronApp.setAppUserModelId('com.typorapro.app')
 
 app.on('browser-window-created', (_, window) => {
   optimizer.watchWindowShortcuts(window)

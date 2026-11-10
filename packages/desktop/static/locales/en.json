@@ -102,21 +102,21 @@
       "reportBug": "Report Bug",
       "viewSource": "View Source",
       "followUs": "Follow Us",
-      "support": "Support MarkText",
+      "support": "Support TyporaPro",
       "license": "License",
       "about": "About",
       "checkUpdates": "Check for Updates"
     },
     "marktext": {
-      "title": "MarkText",
-      "about": "About MarkText",
+      "title": "TyporaPro",
+      "about": "About TyporaPro",
       "checkUpdates": "Check for Updates...",
       "preferences": "Preferences",
       "services": "Services",
-      "hide": "Hide MarkText",
+      "hide": "Hide TyporaPro",
       "hideOthers": "Hide Others",
       "showAll": "Show All",
-      "quit": "Quit MarkText"
+      "quit": "Quit TyporaPro"
     },
     "view": {
       "view": "View",
@@ -293,7 +293,7 @@
       "conflict": "The destination already contains an item with this name. Rename it before trying again.",
       "missing": "The source or destination no longer exists. Refresh the folder and try again.",
       "permission": "The item could not be moved. Check folder permissions and whether another application is using it.",
-      "openElsewhere": "Close this file and any documents inside this folder in other MarkText windows before moving it.",
+      "openElsewhere": "Close this file and any documents inside this folder in other TyporaPro windows before moving it.",
       "destinationOpen": "A document is already open at the destination path. Close it before trying again."
     }
   },
@@ -410,7 +410,7 @@
   },
   "import": {
     "title": "Import or Open",
-    "description": "Drop here to get your stuff into MarkText"
+    "description": "Drop here to get your stuff into TyporaPro"
   },
   "preferences": {
     "title": "Preferences",
@@ -633,7 +633,7 @@
         "scriptPath": "Script path",
         "invalidScript": "Enter the path to an existing executable script."
       },
-      "defaultBehavior": "The default behavior after pasting or dragging the image to MarkText"
+      "defaultBehavior": "The default behavior after pasting or dragging the image to TyporaPro"
     },
     "markdown": {
       "title": "Markdown",
@@ -664,10 +664,10 @@
           "simple": "Simple"
         },
         "mermaidLightTheme": {
-          "title": "Mermaid theme for light MarkText themes"
+          "title": "Mermaid theme for light TyporaPro themes"
         },
         "mermaidDarkTheme": {
-          "title": "Mermaid theme for dark MarkText themes"
+          "title": "Mermaid theme for dark TyporaPro themes"
         },
         "plantumlServer": {
           "title": "PlantUML Server URL"
@@ -782,7 +782,7 @@
   },
   "commands": {
     "mt": {
-      "hide": "Hide MarkText",
+      "hide": "Hide TyporaPro",
       "hideOthers": "Hide Others"
     },
     "file": {
@@ -939,7 +939,7 @@
     "fileExists": "File exists {filename}",
     "files": "Files",
     "importWarning": "Import warning",
-    "installPandoc": "Pandoc was not found. Install it, or set the MARKTEXT_PANDOC environment variable to the pandoc binary and restart MarkText.",
+    "installPandoc": "Pandoc was not found. Install it, or set the MARKTEXT_PANDOC environment variable to the pandoc binary and restart TyporaPro.",
     "exportWarning": "Export warning",
     "exportWarningMore": "…and {count} more",
     "keepOpen": "Keep open",
@@ -956,7 +956,7 @@
     "configSchemaViolation": "Configuration schema violation",
     "copyError": "Copy error",
     "initializationFailed": "Initialization failed {hint}",
-    "otherInstanceDetected": "Another instance of MarkText is already running",
+    "otherInstanceDetected": "Another instance of TyporaPro is already running",
     "report": "Report",
     "startupError": "Startup error",
     "terminatedDueToError": "Terminated due to error",

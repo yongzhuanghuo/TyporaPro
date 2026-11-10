@@ -18,7 +18,7 @@
         class="title"
         @dblclick.stop="toggleMaxmizeOnMacOS"
       >
-        <span v-if="!filename">MarkText</span>
+        <span v-if="!filename">TyporaPro</span>
         <span v-else>
           <span
             class="save-dot"

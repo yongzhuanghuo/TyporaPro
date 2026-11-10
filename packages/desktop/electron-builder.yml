@@ -1,5 +1,5 @@
-appId: com.github.marktext.marktext
-productName: MarkText
+appId: com.typorapro.app
+productName: TyporaPro
 directories:
   buildResources: build
   output: ../../dist
@@ -123,14 +123,16 @@ fileAssociations:
     role: Editor
     icon: icons/md.ico
 win:
-  executableName: marktext
-  artifactName: 'marktext-win-${arch}-${version}.${ext}'
+  executableName: typorapro
+  artifactName: 'typorapro-win-${arch}-${version}.${ext}'
   target:
     - target: 'nsis'
-    - target: 'zip'
-  icon: static/icon.ico
+  icon: static/typora/icon.ico
 nsis:
-  artifactName: 'marktext-win-${arch}-${version}-setup.${ext}'
+  artifactName: 'typorapro-win-${arch}-${version}-setup.${ext}'
+  installerIcon: static/typora/icon.ico
+  uninstallerIcon: static/typora/icon.ico
+  installerHeaderIcon: static/typora/icon.ico
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: true
@@ -140,13 +142,13 @@ nsis:
   perMachine: false
   include: windows/installer.nsh
 mac:
-  artifactName: 'marktext-mac-${arch}-${version}.${ext}'
+  artifactName: 'typorapro-mac-${arch}-${version}.${ext}'
   entitlementsInherit: build/mac/entitlements.mac.plist
   extendInfo:
     - NSCameraUsageDescription: Application requests access to the device's camera.
     - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
     - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
-  icon: static/icon.icns
+  icon: static/typora/icon.icns
   notarize: false
   # The ripgrep packages are per-arch and both are shipped so each slice can
   # resolve the matching binary at runtime. They are identical across the x64
@@ -154,9 +156,8 @@ mac:
   x64ArchFiles: '**/@vscode/ripgrep-darwin-*/bin/rg'
   target:
     - dmg
-    - zip
 dmg:
-  artifactName: 'marktext-mac-${arch}-${version}.${ext}'
+  artifactName: 'typorapro-mac-${arch}-${version}.${ext}'
   contents:
     - x: 410
       y: 240

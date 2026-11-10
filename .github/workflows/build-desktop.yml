@@ -1,4 +1,4 @@
-name: Build Windows Package
+name: Build Desktop Packages
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ on:
       - 'scripts/**'
       - 'pnpm-lock.yaml'
       - 'pnpm-workspace.yaml'
-      - '.github/workflows/build-windows.yml'
+      - '.github/workflows/build-desktop.yml'
 
 permissions:
   contents: read
@@ -37,15 +37,41 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build Windows x64 package
+      - name: Build Windows x64 installer
         run: pnpm run build:win
 
       - name: Upload installer
         uses: actions/upload-artifact@v4
         with:
-          name: marktext-win-x64
-          path: |
-            dist/*.exe
-            dist/*.zip
+          name: typorapro-win-x64
+          path: dist/*.exe
+          if-no-files-found: error
+          retention-days: 14
+
+  macos-universal:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.21.1
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build universal macOS app
+        run: pnpm run build:mac:universal
+
+      - name: Upload DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: typorapro-mac-universal
+          path: dist/*.dmg
           if-no-files-found: error
           retention-days: 14

@@ -102,21 +102,21 @@
       "reportBug": "Fehler melden",
       "viewSource": "Quellcode anzeigen",
       "followUs": "Folgen Sie uns",
-      "support": "MarkText unterstützen",
+      "support": "TyporaPro unterstützen",
       "license": "Lizenz",
       "about": "Über",
       "checkUpdates": "Updates prüfen"
     },
     "marktext": {
-      "title": "MarkText",
-      "about": "Über MarkText",
+      "title": "TyporaPro",
+      "about": "Über TyporaPro",
       "checkUpdates": "Nach Updates suchen...",
       "preferences": "Einstellungen",
       "services": "Dienste",
-      "hide": "MarkText ausblenden",
+      "hide": "TyporaPro ausblenden",
       "hideOthers": "Andere ausblenden",
       "showAll": "Alle anzeigen",
-      "quit": "MarkText beenden"
+      "quit": "TyporaPro beenden"
     },
     "view": {
       "view": "Ansicht",
@@ -293,7 +293,7 @@
       "conflict": "The destination already contains an item with this name. Rename it before trying again.",
       "missing": "The source or destination no longer exists. Refresh the folder and try again.",
       "permission": "The item could not be moved. Check folder permissions and whether another application is using it.",
-      "openElsewhere": "Close this file and any documents inside this folder in other MarkText windows before moving it.",
+      "openElsewhere": "Close this file and any documents inside this folder in other TyporaPro windows before moving it.",
       "destinationOpen": "A document is already open at the destination path. Close it before trying again."
     }
   },
@@ -410,7 +410,7 @@
   },
   "import": {
     "title": "Importieren oder öffnen",
-    "description": "Hier hineinziehen, um Ihren Inhalt in MarkText zu importieren"
+    "description": "Hier hineinziehen, um Ihren Inhalt in TyporaPro zu importieren"
   },
   "preferences": {
     "title": "Einstellungen",
@@ -633,7 +633,7 @@
         "lastSuccessTime": "Letzte erfolgreiche Zeit",
         "invalidScript": "Gib den Pfad zu einem vorhandenen ausführbaren Skript ein."
       },
-      "defaultBehavior": "Standardverhalten nach dem Einfügen oder Ziehen eines Bildes in MarkText"
+      "defaultBehavior": "Standardverhalten nach dem Einfügen oder Ziehen eines Bildes in TyporaPro"
     },
     "markdown": {
       "title": "Markdown",
@@ -664,10 +664,10 @@
           "simple": "Einfach"
         },
         "mermaidLightTheme": {
-          "title": "Mermaid-Theme für helle MarkText-Themes"
+          "title": "Mermaid-Theme für helle TyporaPro-Themes"
         },
         "mermaidDarkTheme": {
-          "title": "Mermaid-Theme für dunkle MarkText-Themes"
+          "title": "Mermaid-Theme für dunkle TyporaPro-Themes"
         },
         "plantumlServer": {
           "title": "PlantUML-Server-URL"
@@ -782,7 +782,7 @@
   },
   "commands": {
     "mt": {
-      "hide": "MarkText ausblenden",
+      "hide": "TyporaPro ausblenden",
       "hideOthers": "Andere ausblenden"
     },
     "file": {
@@ -939,7 +939,7 @@
     "fileExists": "Datei existiert bereits: {filename}",
     "files": "Dateien",
     "importWarning": "Import-Warnung",
-    "installPandoc": "Pandoc wurde nicht gefunden. Installieren Sie es, oder setzen Sie die Umgebungsvariable MARKTEXT_PANDOC auf den Pfad zur pandoc-Binary und starten Sie MarkText neu.",
+    "installPandoc": "Pandoc wurde nicht gefunden. Installieren Sie es, oder setzen Sie die Umgebungsvariable MARKTEXT_PANDOC auf den Pfad zur pandoc-Binary und starten Sie TyporaPro neu.",
     "exportWarning": "Export-Warnung",
     "exportWarningMore": "…und {count} weitere",
     "keepOpen": "Offen halten",
@@ -956,7 +956,7 @@
     "configSchemaViolation": "Konfigurationsschema-Verletzung",
     "copyError": "Kopierfehler",
     "initializationFailed": "Initialisierung fehlgeschlagen {hint}",
-    "otherInstanceDetected": "Eine andere Instanz von MarkText läuft bereits",
+    "otherInstanceDetected": "Eine andere Instanz von TyporaPro läuft bereits",
     "report": "Melden",
     "startupError": "Startfehler",
     "terminatedDueToError": "Aufgrund eines Fehlers beendet",

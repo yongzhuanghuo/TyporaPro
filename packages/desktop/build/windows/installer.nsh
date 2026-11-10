@@ -1,6 +1,6 @@
 ; Windows remembers an "Open with" choice as a UserChoice naming this ProgId,
 ; and that pin outlives any reinstall, so the name must stay as it is.
-!define MT_PROGID "MarkText.Document"
+!define MT_PROGID "TyporaPro.Document"
 
 ; These must be written on every install and removed only on a real uninstall.
 ; electron-builder runs the previous version's uninstaller silently before it
@@ -18,7 +18,7 @@
 !macroend
 
 ; The extension key also carries the OpenWithProgids entries of every other
-; Markdown editor the user has installed, so only MarkText's own values go.
+; Markdown editor the user has installed, so only TyporaPro's own values go.
 !macro mtUnassociateExtension EXT
   DeleteRegValue SHELL_CONTEXT "Software\Classes\${EXT}\OpenWithProgids" "${MT_PROGID}"
   Push $0
@@ -39,18 +39,18 @@
   !insertmacro mtAssociateExtension ".mdx"
 
   WriteRegStr SHELL_CONTEXT "Software\Classes\${MT_PROGID}" \
-    "" "MarkText Markdown Document"
+    "" "TyporaPro Markdown Document"
   WriteRegExpandStr SHELL_CONTEXT "Software\Classes\${MT_PROGID}\DefaultIcon" \
     "" "$INSTDIR\resources\icons\md.ico,0"
   WriteRegExpandStr SHELL_CONTEXT "Software\Classes\${MT_PROGID}\shell\open\command" \
-    "" '"$INSTDIR\marktext.exe" "%1"'
+    "" '"$INSTDIR\typorapro.exe" "%1"'
 
   ; electron-builder writes the command for its own ProgId — `Markdown`, the
   ; `fileAssociations[].name` in electron-builder.yml — with the executable
   ; path unquoted, which runs `C:\Program` when the directory the user picked
   ; during setup contains a space.
   WriteRegStr SHELL_CONTEXT "Software\Classes\Markdown\shell\open\command" \
-    "" '"$INSTDIR\marktext.exe" "%1"'
+    "" '"$INSTDIR\typorapro.exe" "%1"'
 
   ; Explorer serves file types from a cache that a fresh install otherwise
   ; keeps until the next sign-in.
@@ -73,6 +73,6 @@
 
   MessageBox MB_YESNO "Do you want to delete user settings?" /SD IDNO IDNO SkipRemoval
     SetShellVarContext current
-    RMDir /r "$APPDATA\marktext"
+    RMDir /r "$APPDATA\TyporaPro"
   SkipRemoval:
 !macroend
