@@ -18,7 +18,10 @@ permissions:
 
 jobs:
   windows-x64:
-    runs-on: windows-latest
+    # windows-latest now points at Windows Server 2025, whose Visual Studio 18
+    # toolchain is not yet recognized by the node-gyp bundled with pnpm. The
+    # 2022 image still provides the VS 17 C++ workload the native modules need.
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
 
