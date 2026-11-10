@@ -52,6 +52,15 @@
   WriteRegStr SHELL_CONTEXT "Software\Classes\Markdown\shell\open\command" \
     "" '"$INSTDIR\typorapro.exe" "%1"'
 
+  ; A shortcut kept from the previous MarkText install is renamed during an
+  ; upgrade but still points at the removed marktext.exe, so Explorer renders
+  ; it without an icon. Recreate both shortcuts so their target and icon refer
+  ; to the current executable again. The built-in macros still honour the
+  ; "create desktop shortcut" choice.
+  StrCpy $keepShortcuts "false"
+  !insertmacro addStartMenuLink $keepShortcuts
+  !insertmacro addDesktopLink $keepShortcuts
+
   ; Explorer serves file types from a cache that a fresh install otherwise
   ; keeps until the next sign-in.
   System::Call 'shell32::SHChangeNotify(i, i, i, i) v (0x08000000, 0, 0, 0)'
